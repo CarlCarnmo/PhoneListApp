@@ -2,6 +2,12 @@
 {
     internal class Program
     {
+        public class person
+        {
+            string fname;
+            string lname;
+            int pn;
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Hej och välkommen till telefonlistan.");
