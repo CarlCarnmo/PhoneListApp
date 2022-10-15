@@ -54,10 +54,10 @@ namespace PhoneListApp
             Console.WriteLine("4. Exit");
             string command;
             List<Person> list = new List<Person>();
-            Console.Write("Kommando: ");
-            command = Console.ReadLine();
             do
             {
+                Console.Write("Kommando: ");
+                command = Console.ReadLine();
                 switch (command)
                 {
                     case "hjälp":
