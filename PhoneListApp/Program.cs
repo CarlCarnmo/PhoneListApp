@@ -54,41 +54,32 @@ namespace PhoneListApp
             Console.WriteLine("4. Exit");
             string command;
             List<Person> list = new List<Person>();
+            Console.Write("Kommando: ");
+            command = Console.ReadLine();
             do
             {
-                Console.Write("Kommando: ");
-                command = Console.ReadLine();
-                if (command == "hjälp")
+                switch (command)
                 {
-                    Console.WriteLine($"Shit is fucked.");
-                }
-                if (command == "1")
-                {
-
-                    Console.Clear();
-                    list = MakeList();
-                    Person.PrintList(list);
-                }
-                if (command == "2")
-                {
-
-                    Console.Clear();
-                    Person.PrintList(list);
-                    Person.RemovePerson(list);
-                }
-                if (command == "3")
-                {
-                    Console.Clear();
-                    Person.PrintList(list);
-
-                }
-                else if (command == "4")
-                {
-                    Environment.Exit(0);
-                }
-                else
-                {
-                    Console.WriteLine($"Okänt kommando: {command}");
+                    case "hjälp":
+                        Console.WriteLine($"Shit is fucked.");
+                        break;
+                    case "1":
+                        Console.Clear();
+                        list = MakeList();
+                        Person.PrintList(list);
+                        break;
+                    case "2":
+                        Console.Clear();
+                        Person.PrintList(list);
+                        Person.RemovePerson(list);
+                        break;
+                    case "3":
+                        Console.Clear();
+                        Person.PrintList(list);
+                        break;
+                    case "4":
+                        Environment.Exit(0);
+                        break;
                 }
             } while (command != "4");
             Console.WriteLine("Hej då!");
